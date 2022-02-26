@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CD1383D5397D25F5ABBE503 /* Pods_HealthQR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13DA33681CB4D0EC273531B0 /* Pods_HealthQR.framework */; };
 		C7F4E3AD27CA4C2E0046B86E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E3AC27CA4C2E0046B86E /* AppDelegate.swift */; };
 		C7F4E3AF27CA4C2E0046B86E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E3AE27CA4C2E0046B86E /* SceneDelegate.swift */; };
 		C7F4E3B127CA4C2E0046B86E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E3B027CA4C2E0046B86E /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13DA33681CB4D0EC273531B0 /* Pods_HealthQR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthQR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7F4E3A927CA4C2E0046B86E /* HealthQR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthQR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7F4E3AC27CA4C2E0046B86E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7F4E3AE27CA4C2E0046B86E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +30,8 @@
 		C7F4E3BA27CA4C2F0046B86E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7F4E3C527CA52BB0046B86E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C7F4E3C827CA57550046B86E /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		CF1149893C72EA68DC9BF623 /* Pods-HealthQR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthQR.debug.xcconfig"; path = "Target Support Files/Pods-HealthQR/Pods-HealthQR.debug.xcconfig"; sourceTree = "<group>"; };
+		F8814CE2D0C6A7027B0EB917 /* Pods-HealthQR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthQR.release.xcconfig"; path = "Target Support Files/Pods-HealthQR/Pods-HealthQR.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +39,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CD1383D5397D25F5ABBE503 /* Pods_HealthQR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		67DCA29E803B7EC7B3B47F21 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF1149893C72EA68DC9BF623 /* Pods-HealthQR.debug.xcconfig */,
+				F8814CE2D0C6A7027B0EB917 /* Pods-HealthQR.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		75B9EB1DEFAB0BA18F314889 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13DA33681CB4D0EC273531B0 /* Pods_HealthQR.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C7F4E3A027CA4C2E0046B86E = {
 			isa = PBXGroup;
 			children = (
 				C7F4E3AB27CA4C2E0046B86E /* HealthQR */,
 				C7F4E3AA27CA4C2E0046B86E /* Products */,
+				67DCA29E803B7EC7B3B47F21 /* Pods */,
+				75B9EB1DEFAB0BA18F314889 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,9 +153,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C7F4E3BD27CA4C2F0046B86E /* Build configuration list for PBXNativeTarget "HealthQR" */;
 			buildPhases = (
+				F23ABBF3371FAC790CE696FC /* [CP] Check Pods Manifest.lock */,
 				C7F4E3A527CA4C2E0046B86E /* Sources */,
 				C7F4E3A627CA4C2E0046B86E /* Frameworks */,
 				C7F4E3A727CA4C2E0046B86E /* Resources */,
+				E4A5062B1E2E096A6CA84E8A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -186,6 +213,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E4A5062B1E2E096A6CA84E8A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HealthQR/Pods-HealthQR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HealthQR/Pods-HealthQR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HealthQR/Pods-HealthQR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F23ABBF3371FAC790CE696FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HealthQR-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C7F4E3A527CA4C2E0046B86E /* Sources */ = {
@@ -340,6 +409,7 @@
 		};
 		C7F4E3BE27CA4C2F0046B86E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF1149893C72EA68DC9BF623 /* Pods-HealthQR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -367,6 +437,7 @@
 		};
 		C7F4E3BF27CA4C2F0046B86E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8814CE2D0C6A7027B0EB917 /* Pods-HealthQR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

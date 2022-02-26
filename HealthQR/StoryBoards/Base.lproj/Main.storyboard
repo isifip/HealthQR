@@ -49,8 +49,50 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone_verify" translatesAutoresizingMaskIntoConstraints="NO" id="s8g-tl-SZk">
+                                <rect key="frame" x="57" y="98" width="300" height="358.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proof of Vaccination Scanner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIp-s4-b6t">
+                                <rect key="frame" x="64.5" y="476.5" width="285" height="26"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the scan button below to begin verifying digital proof of vaccination" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4n-7v-H9v">
+                                <rect key="frame" x="20" y="512.5" width="374" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5r-Sc-bwp">
+                                <rect key="frame" x="93" y="733" width="228" height="50"/>
+                                <color key="backgroundColor" red="0.29803921568627451" green="0.56470588235294117" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="S5f-TK-wPp"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Scan QR Code">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="L4n-7v-H9v" secondAttribute="trailing" constant="20" id="0S6-WM-ACL"/>
+                            <constraint firstItem="s8g-tl-SZk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5sv-x0-aV9"/>
+                            <constraint firstItem="S5r-Sc-bwp" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.55" id="AWx-ey-g2t"/>
+                            <constraint firstItem="PIp-s4-b6t" firstAttribute="top" secondItem="s8g-tl-SZk" secondAttribute="bottom" constant="20" id="KHk-aB-8Zh"/>
+                            <constraint firstItem="PIp-s4-b6t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ThZ-3X-Iad"/>
+                            <constraint firstItem="L4n-7v-H9v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="gDP-cS-MbN"/>
+                            <constraint firstItem="S5r-Sc-bwp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jVA-34-Y4a"/>
+                            <constraint firstItem="L4n-7v-H9v" firstAttribute="top" secondItem="PIp-s4-b6t" secondAttribute="bottom" constant="10" id="o1Y-Pn-9Os"/>
+                            <constraint firstItem="L4n-7v-H9v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rNR-es-PIw"/>
+                            <constraint firstItem="s8g-tl-SZk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="upx-VP-oN5"/>
+                            <constraint firstItem="S5r-Sc-bwp" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-30" id="xLi-ie-fYm"/>
+                            <constraint firstItem="s8g-tl-SZk" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="xeO-i9-Do8"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7NQ-0K-p7s"/>
                 </viewController>
@@ -98,6 +140,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="phone_verify" width="300" height="450"/>
         <image name="qrcode.viewfinder" catalog="system" width="128" height="115"/>
         <image name="settings" width="21" height="21"/>
         <systemColor name="systemBackgroundColor">

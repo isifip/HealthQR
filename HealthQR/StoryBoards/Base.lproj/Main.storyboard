@@ -58,11 +58,11 @@
             </objects>
             <point key="canvasLocation" x="341" y="-168"/>
         </scene>
-        <!--Item-->
+        <!--Verifier-->
         <scene sceneID="Sg5-AF-OMx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iYk-IA-fFe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="bw2-h9-yaV"/>
+                    <tabBarItem key="tabBarItem" title="Verifier" image="qrcode.viewfinder" catalog="system" id="bw2-h9-yaV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3oq-pD-MmH">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -77,11 +77,11 @@
             </objects>
             <point key="canvasLocation" x="-442" y="-168"/>
         </scene>
-        <!--Item-->
+        <!--Settings-->
         <scene sceneID="2Is-Nb-uor">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tth-RD-bMv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="UGw-ic-LLK"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="UGw-ic-LLK"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KYJ-pp-7HP">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -98,6 +98,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="qrcode.viewfinder" catalog="system" width="128" height="115"/>
+        <image name="settings" width="21" height="21"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

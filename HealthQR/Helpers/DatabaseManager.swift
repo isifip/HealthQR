@@ -53,7 +53,7 @@ class DatabaseManager {
                 }
             } else {
                 returnValue = true
-                print("Database file was fount at path: \(databasePath.path)")
+                print("Database file was found at path: \(databasePath.path)")
             }
         } catch {
             returnValue = false
@@ -67,6 +67,7 @@ class DatabaseManager {
         do {
             dbQueue = try DatabaseQueue(path: databasePath.absoluteString)
             returnValue = true
+            
         } catch {
             returnValue = false
         }
@@ -83,6 +84,7 @@ class DatabaseManager {
                 print("Error opening Database")
             } else {
                 // upgrade the database if necessary
+                print("Database opened successfully ")
             }
         } else {
             print("Error copying Database")

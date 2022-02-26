@@ -30,8 +30,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    func setupDatabase() {
+        DatabaseManager.shared().checkAndloadDB(dbFileName: "db.db")
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         setupNavigationAppearance()
+        setupDatabase()
         
         return true
     }

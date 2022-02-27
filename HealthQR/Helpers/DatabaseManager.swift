@@ -42,7 +42,7 @@ class DatabaseManager {
         
         do {
             let fileManager = FileManager.default
-            if fileManager.fileExists(atPath: databasePath.path) {
+            if !fileManager.fileExists(atPath: databasePath.path) {
                 if let dbFilePath = Bundle.main.path(forResource: name, ofType: ext) {
                     try fileManager.copyItem(atPath: dbFilePath, toPath: databasePath.path)
                     excludeFromBackup(url: databasePath)
@@ -57,6 +57,7 @@ class DatabaseManager {
             }
         } catch {
             returnValue = false
+            print("Something went wrong")
         }
         return returnValue
     }

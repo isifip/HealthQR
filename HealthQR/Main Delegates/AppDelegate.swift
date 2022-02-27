@@ -34,8 +34,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DatabaseManager.shared().checkAndloadDB(dbFileName: "db.db")
     }
     
+    func testHarness() {
+        let shc = Constants.SMART_HEALTH_CARD_TEST
+        let shcnum = shc.replacingOccurrences(of: "shc:/", with: "").transformFromNumericMode(every: 2)
+        print(shcnum)
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        testHarness()
         setupNavigationAppearance()
         setupDatabase()
         

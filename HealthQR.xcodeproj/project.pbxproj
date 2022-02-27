@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0CD1383D5397D25F5ABBE503 /* Pods_HealthQR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13DA33681CB4D0EC273531B0 /* Pods_HealthQR.framework */; };
+		C755E35727CB90AA00E6F5BA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C755E35627CB90AA00E6F5BA /* Constants.swift */; };
+		C755E35927CB919300E6F5BA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C755E35827CB919300E6F5BA /* Extensions.swift */; };
 		C7A6A06627CA79CE0048B7B4 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A6A06527CA79CE0048B7B4 /* DatabaseManager.swift */; };
 		C7A6A06827CA7CDA0048B7B4 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A6A06727CA7CDA0048B7B4 /* Common.swift */; };
 		C7C90BA427CB84C8008F6CFC /* db.db in Resources */ = {isa = PBXBuildFile; fileRef = C7C90BA327CB84C7008F6CFC /* db.db */; };
@@ -24,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		13DA33681CB4D0EC273531B0 /* Pods_HealthQR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthQR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C755E35627CB90AA00E6F5BA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C755E35827CB919300E6F5BA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C7A6A06527CA79CE0048B7B4 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		C7A6A06727CA7CDA0048B7B4 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		C7C90BA327CB84C7008F6CFC /* db.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.db; sourceTree = "<group>"; };
@@ -169,6 +173,8 @@
 				C7F4E3C827CA57550046B86E /* Theme.swift */,
 				C7A6A06527CA79CE0048B7B4 /* DatabaseManager.swift */,
 				C7A6A06727CA7CDA0048B7B4 /* Common.swift */,
+				C755E35627CB90AA00E6F5BA /* Constants.swift */,
+				C755E35827CB919300E6F5BA /* Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -294,9 +300,11 @@
 				C7A6A06627CA79CE0048B7B4 /* DatabaseManager.swift in Sources */,
 				C7F4E3C927CA57550046B86E /* Theme.swift in Sources */,
 				C7C90BA627CB85EF008F6CFC /* CustomButton.swift in Sources */,
+				C755E35927CB919300E6F5BA /* Extensions.swift in Sources */,
 				C7F4E3AF27CA4C2E0046B86E /* SceneDelegate.swift in Sources */,
 				C7F4E3C627CA52BB0046B86E /* SettingsViewController.swift in Sources */,
 				C7A6A06827CA7CDA0048B7B4 /* Common.swift in Sources */,
+				C755E35727CB90AA00E6F5BA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

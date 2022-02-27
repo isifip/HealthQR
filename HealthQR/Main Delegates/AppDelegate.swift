@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import JOSESwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -36,8 +37,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func testHarness() {
         let shc = Constants.SMART_HEALTH_CARD_TEST
-        let shcnum = shc.replacingOccurrences(of: "shc:/", with: "").transformFromNumericMode(every: 2)
-        print(shcnum)
+        let jwsString = shc.replacingOccurrences(of: "shc:/", with: "").transformFromNumericMode(every: 2)
+        
+        do {
+            let jws = try JWS(compactSerialization: jwsString)
+            print(jws.header)
+            print(String(decoding: jws.payload.data(), as: UTF8.self))
+            print(jws.signature)
+            
+            let uncompressed = try (jws.payload.data() as NSData).decompressed(using: .zlib)
+            guard let str = String.init(data: uncompressed as Data, encoding: .utf8) else {
+                return
+            }
+            print("raw data: \(str)")
+        } catch {
+            
+        }
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

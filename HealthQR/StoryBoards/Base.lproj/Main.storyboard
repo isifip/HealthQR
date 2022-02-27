@@ -65,16 +65,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5r-Sc-bwp">
-                                <rect key="frame" x="93" y="733" width="228" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5r-Sc-bwp" customClass="CustomButton" customModule="HealthQR" customModuleProvider="target">
+                                <rect key="frame" x="93" y="713" width="228" height="50"/>
                                 <color key="backgroundColor" red="0.29803921568627451" green="0.56470588235294117" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="S5f-TK-wPp"/>
                                 </constraints>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Scan QR Code">
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                <state key="normal" title="Scan QR Code" image="qricon">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="scanButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rur-XS-0ap"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -90,11 +94,14 @@
                             <constraint firstItem="L4n-7v-H9v" firstAttribute="top" secondItem="PIp-s4-b6t" secondAttribute="bottom" constant="10" id="o1Y-Pn-9Os"/>
                             <constraint firstItem="L4n-7v-H9v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rNR-es-PIw"/>
                             <constraint firstItem="s8g-tl-SZk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="upx-VP-oN5"/>
-                            <constraint firstItem="S5r-Sc-bwp" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-30" id="xLi-ie-fYm"/>
+                            <constraint firstItem="S5r-Sc-bwp" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-50" id="xLi-ie-fYm"/>
                             <constraint firstItem="s8g-tl-SZk" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="xeO-i9-Do8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7NQ-0K-p7s"/>
+                    <connections>
+                        <outlet property="btnScan" destination="S5r-Sc-bwp" id="g3D-cf-ifk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,9 +146,15 @@
             <point key="canvasLocation" x="-442.02898550724643" y="474.77678571428567"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="S5r-Sc-bwp">
+            <size key="intrinsicContentSize" width="138" height="22"/>
+        </designable>
+    </designables>
     <resources>
         <image name="phone_verify" width="300" height="450"/>
         <image name="qrcode.viewfinder" catalog="system" width="128" height="115"/>
+        <image name="qricon" width="21" height="21"/>
         <image name="settings" width="21" height="21"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

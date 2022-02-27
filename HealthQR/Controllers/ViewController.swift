@@ -9,6 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var btnScan: CustomButton!
+    @IBAction func scanButtonTapped(_ sender: Any) {
+        print("Scan button tapped")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        

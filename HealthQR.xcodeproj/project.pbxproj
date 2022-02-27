@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0CD1383D5397D25F5ABBE503 /* Pods_HealthQR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13DA33681CB4D0EC273531B0 /* Pods_HealthQR.framework */; };
-		C7A6A06427CA783E0048B7B4 /* db.db in Resources */ = {isa = PBXBuildFile; fileRef = C7A6A06327CA783E0048B7B4 /* db.db */; };
 		C7A6A06627CA79CE0048B7B4 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A6A06527CA79CE0048B7B4 /* DatabaseManager.swift */; };
 		C7A6A06827CA7CDA0048B7B4 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A6A06727CA7CDA0048B7B4 /* Common.swift */; };
+		C7C90BA427CB84C8008F6CFC /* db.db in Resources */ = {isa = PBXBuildFile; fileRef = C7C90BA327CB84C7008F6CFC /* db.db */; };
+		C7C90BA627CB85EF008F6CFC /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C90BA527CB85EF008F6CFC /* CustomButton.swift */; };
 		C7F4E3AD27CA4C2E0046B86E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E3AC27CA4C2E0046B86E /* AppDelegate.swift */; };
 		C7F4E3AF27CA4C2E0046B86E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E3AE27CA4C2E0046B86E /* SceneDelegate.swift */; };
 		C7F4E3B127CA4C2E0046B86E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E3B027CA4C2E0046B86E /* ViewController.swift */; };
@@ -23,9 +24,10 @@
 
 /* Begin PBXFileReference section */
 		13DA33681CB4D0EC273531B0 /* Pods_HealthQR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthQR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7A6A06327CA783E0048B7B4 /* db.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.db; sourceTree = "<group>"; };
 		C7A6A06527CA79CE0048B7B4 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		C7A6A06727CA7CDA0048B7B4 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		C7C90BA327CB84C7008F6CFC /* db.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.db; sourceTree = "<group>"; };
+		C7C90BA527CB85EF008F6CFC /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		C7F4E3A927CA4C2E0046B86E /* HealthQR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthQR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7F4E3AC27CA4C2E0046B86E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7F4E3AE27CA4C2E0046B86E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,15 +74,15 @@
 		C7A6A06127CA782F0048B7B4 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				C7A6A06227CA783E0048B7B4 /* db */,
+				C7C90BA227CB84C7008F6CFC /* db */,
 			);
 			path = Database;
 			sourceTree = "<group>";
 		};
-		C7A6A06227CA783E0048B7B4 /* db */ = {
+		C7C90BA227CB84C7008F6CFC /* db */ = {
 			isa = PBXGroup;
 			children = (
-				C7A6A06327CA783E0048B7B4 /* db.db */,
+				C7C90BA327CB84C7008F6CFC /* db.db */,
 			);
 			path = db;
 			sourceTree = "<group>";
@@ -149,6 +151,7 @@
 		C7F4E3C327CA4DC50046B86E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C7C90BA527CB85EF008F6CFC /* CustomButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -233,7 +236,7 @@
 				C7F4E3B927CA4C2F0046B86E /* LaunchScreen.storyboard in Resources */,
 				C7F4E3B627CA4C2F0046B86E /* Assets.xcassets in Resources */,
 				C7F4E3B427CA4C2E0046B86E /* Main.storyboard in Resources */,
-				C7A6A06427CA783E0048B7B4 /* db.db in Resources */,
+				C7C90BA427CB84C8008F6CFC /* db.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +293,7 @@
 				C7F4E3AD27CA4C2E0046B86E /* AppDelegate.swift in Sources */,
 				C7A6A06627CA79CE0048B7B4 /* DatabaseManager.swift in Sources */,
 				C7F4E3C927CA57550046B86E /* Theme.swift in Sources */,
+				C7C90BA627CB85EF008F6CFC /* CustomButton.swift in Sources */,
 				C7F4E3AF27CA4C2E0046B86E /* SceneDelegate.swift in Sources */,
 				C7F4E3C627CA52BB0046B86E /* SettingsViewController.swift in Sources */,
 				C7A6A06827CA7CDA0048B7B4 /* Common.swift in Sources */,

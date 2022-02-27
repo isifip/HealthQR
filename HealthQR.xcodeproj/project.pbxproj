@@ -11,6 +11,7 @@
 		C755E35727CB90AA00E6F5BA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C755E35627CB90AA00E6F5BA /* Constants.swift */; };
 		C755E35927CB919300E6F5BA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C755E35827CB919300E6F5BA /* Extensions.swift */; };
 		C755E35B27CB9D4600E6F5BA /* SmartHealthCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C755E35A27CB9D4600E6F5BA /* SmartHealthCard.swift */; };
+		C755E35D27CBA55E00E6F5BA /* SmartHealthCardReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C755E35C27CBA55E00E6F5BA /* SmartHealthCardReader.swift */; };
 		C7A6A06627CA79CE0048B7B4 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A6A06527CA79CE0048B7B4 /* DatabaseManager.swift */; };
 		C7A6A06827CA7CDA0048B7B4 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A6A06727CA7CDA0048B7B4 /* Common.swift */; };
 		C7C90BA427CB84C8008F6CFC /* db.db in Resources */ = {isa = PBXBuildFile; fileRef = C7C90BA327CB84C7008F6CFC /* db.db */; };
@@ -30,6 +31,7 @@
 		C755E35627CB90AA00E6F5BA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C755E35827CB919300E6F5BA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C755E35A27CB9D4600E6F5BA /* SmartHealthCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartHealthCard.swift; sourceTree = "<group>"; };
+		C755E35C27CBA55E00E6F5BA /* SmartHealthCardReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartHealthCardReader.swift; sourceTree = "<group>"; };
 		C7A6A06527CA79CE0048B7B4 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		C7A6A06727CA7CDA0048B7B4 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		C7C90BA327CB84C7008F6CFC /* db.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.db; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				C7A6A06727CA7CDA0048B7B4 /* Common.swift */,
 				C755E35627CB90AA00E6F5BA /* Constants.swift */,
 				C755E35827CB919300E6F5BA /* Extensions.swift */,
+				C755E35C27CBA55E00E6F5BA /* SmartHealthCardReader.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				C7F4E3AD27CA4C2E0046B86E /* AppDelegate.swift in Sources */,
 				C755E35B27CB9D4600E6F5BA /* SmartHealthCard.swift in Sources */,
 				C7A6A06627CA79CE0048B7B4 /* DatabaseManager.swift in Sources */,
+				C755E35D27CBA55E00E6F5BA /* SmartHealthCardReader.swift in Sources */,
 				C7F4E3C927CA57550046B86E /* Theme.swift in Sources */,
 				C7C90BA627CB85EF008F6CFC /* CustomButton.swift in Sources */,
 				C755E35927CB919300E6F5BA /* Extensions.swift in Sources */,

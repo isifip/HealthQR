@@ -58,33 +58,33 @@ struct Resource: Codable {
 
 // MARK: - Name
 struct Name: Codable {
-    let family: String
-    let given: [String]
+    let family: String?
+    let given: [String]?
 }
 
 // MARK: - Patient
 struct Patient: Codable {
-    let reference: String
+    let reference: String?
 }
 
 // MARK: - Performer
 struct Performer: Codable {
-    let actor: Actor
+    let actor: Actor?
 }
 
 // MARK: - Actor
 struct Actor: Codable {
-    let display: String
+    let display: String?
 }
 
 // MARK: - VaccineCode
 struct VaccineCode: Codable {
-    let coding: [Coding]
+    let coding: [Coding]?
 }
 
 // MARK: - Coding
 struct Coding: Codable {
-    let system: String
-    let code: String
+    let system: String?
+    let code: String?
 }
 

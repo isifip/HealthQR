@@ -20,4 +20,25 @@ extension String {
         }
         return result
     }
+    
+    
+    func sanitizeBase64() -> String {
+        var retStr = self.replacingOccurrences(of: "-", with: "+").replacingOccurrences(of: "_", with: "/")
+        if retStr.count % 4 == 2 {
+            retStr.append("==")
+        }
+        
+        if retStr.count % 4 == 3 {
+            retStr.append("=")
+        }
+        return retStr
+    }
+    
+    
+}
+
+extension Data {
+    var bytes: [UInt8] {
+        return [UInt8](self)
+    }
 }

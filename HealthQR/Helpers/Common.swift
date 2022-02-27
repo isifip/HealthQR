@@ -20,4 +20,19 @@ class Common {
         let documentsDirectory = paths[0]
         return documentsDirectory.appendingPathComponent(text)
     }
+    
+    static func loadJSON(fromURLString urlString: String, completion: @escaping (Result<Data, Error>) -> Void) {
+        if let url = URL(string: urlString) {
+            let urlSession = URLSession(configuration: .default).dataTask(with: url) { data, response, error in
+                if let error = error {
+                    completion(.failure(error))
+                }
+                if let data = data {
+                    completion(.success(data))
+                }
+            }
+            urlSession.resume()
+        }
+            
+    }
 }

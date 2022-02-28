@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0CD1383D5397D25F5ABBE503 /* Pods_HealthQR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13DA33681CB4D0EC273531B0 /* Pods_HealthQR.framework */; };
 		C743BDC427CCF946003B65D3 /* SmartHealthCardResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C743BDC327CCF946003B65D3 /* SmartHealthCardResults.swift */; };
+		C743BDC627CD1484003B65D3 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C743BDC527CD1484003B65D3 /* ResultsViewController.swift */; };
+		C743BDC827CD176B003B65D3 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C743BDC727CD176B003B65D3 /* HeaderView.swift */; };
 		C755E35727CB90AA00E6F5BA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C755E35627CB90AA00E6F5BA /* Constants.swift */; };
 		C755E35927CB919300E6F5BA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C755E35827CB919300E6F5BA /* Extensions.swift */; };
 		C755E35B27CB9D4600E6F5BA /* SmartHealthCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C755E35A27CB9D4600E6F5BA /* SmartHealthCard.swift */; };
@@ -31,6 +33,8 @@
 /* Begin PBXFileReference section */
 		13DA33681CB4D0EC273531B0 /* Pods_HealthQR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthQR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C743BDC327CCF946003B65D3 /* SmartHealthCardResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartHealthCardResults.swift; sourceTree = "<group>"; };
+		C743BDC527CD1484003B65D3 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		C743BDC727CD176B003B65D3 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		C755E35627CB90AA00E6F5BA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C755E35827CB919300E6F5BA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C755E35A27CB9D4600E6F5BA /* SmartHealthCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartHealthCard.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 			children = (
 				C7F4E3B027CA4C2E0046B86E /* ViewController.swift */,
 				C7F4E3C527CA52BB0046B86E /* SettingsViewController.swift */,
+				C743BDC527CD1484003B65D3 /* ResultsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				C7C90BA527CB85EF008F6CFC /* CustomButton.swift */,
+				C743BDC727CD176B003B65D3 /* HeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -315,12 +321,14 @@
 				C7A6A06627CA79CE0048B7B4 /* DatabaseManager.swift in Sources */,
 				C755E35D27CBA55E00E6F5BA /* SmartHealthCardReader.swift in Sources */,
 				C7F4E3C927CA57550046B86E /* Theme.swift in Sources */,
+				C743BDC627CD1484003B65D3 /* ResultsViewController.swift in Sources */,
 				C7C90BA627CB85EF008F6CFC /* CustomButton.swift in Sources */,
 				C755E35927CB919300E6F5BA /* Extensions.swift in Sources */,
 				C7F4E3AF27CA4C2E0046B86E /* SceneDelegate.swift in Sources */,
 				C7F4E3C627CA52BB0046B86E /* SettingsViewController.swift in Sources */,
 				C7A6A06827CA7CDA0048B7B4 /* Common.swift in Sources */,
 				C755E35727CB90AA00E6F5BA /* Constants.swift in Sources */,
+				C743BDC827CD176B003B65D3 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

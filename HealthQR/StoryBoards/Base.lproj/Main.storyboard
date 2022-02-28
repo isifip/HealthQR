@@ -107,6 +107,38 @@
             </objects>
             <point key="canvasLocation" x="341" y="-168"/>
         </scene>
+        <!--Results View Controller-->
+        <scene sceneID="mQr-j2-8PG">
+            <objects>
+                <viewController storyboardIdentifier="resultsViewController" id="cTg-Hn-RNi" customClass="ResultsViewController" customModule="HealthQR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RWX-ON-ekq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ey7-RA-5Rg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="r6M-uN-7Ux" userLabel="HeaderView">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                </view>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BSp-zJ-HAA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Ey7-RA-5Rg" secondAttribute="bottom" id="1q2-CM-EA3"/>
+                            <constraint firstItem="Ey7-RA-5Rg" firstAttribute="leading" secondItem="RWX-ON-ekq" secondAttribute="leading" id="B0T-a2-jfr"/>
+                            <constraint firstItem="Ey7-RA-5Rg" firstAttribute="top" secondItem="RWX-ON-ekq" secondAttribute="top" id="TXF-kb-zME"/>
+                            <constraint firstItem="Ey7-RA-5Rg" firstAttribute="trailing" secondItem="RWX-ON-ekq" secondAttribute="trailing" id="h3s-C4-AoP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9id-3t-0aY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1134.7826086956522" y="-168.08035714285714"/>
+        </scene>
         <!--Verifier-->
         <scene sceneID="Sg5-AF-OMx">
             <objects>
@@ -158,6 +190,9 @@
         <image name="settings" width="21" height="21"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

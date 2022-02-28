@@ -235,7 +235,6 @@ class SmartHealthCardReader {
                 }
                 
                 let shc = try JSONDecoder().decode(SmartHealthCard.self, from: jsonData)
-                print(shc)
                 verifySmartHealthCard(jws: jws, shc: shc, shcresults: smartHealthCardResults) { success in
                     completion(smartHealthCardResults)
                 }

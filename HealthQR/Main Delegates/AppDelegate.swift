@@ -37,8 +37,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func testHarness() {
         let shc = Constants.SMART_HEALTH_CARD_TEST
-        SmartHealthCardReader.shared().parseSmartHealthCard(qrCodeString: shc) { smartHealthCard in
-
+        SmartHealthCardReader.shared().parseSmartHealthCard(qrCodeString: shc) { shcresults in
+            if let shcresults = shcresults {
+                print(shcresults.getPatientName())
+                print(shcresults.getBirthDateFormatted())
+                print(shcresults.iss)
+            }
         }
     }
     

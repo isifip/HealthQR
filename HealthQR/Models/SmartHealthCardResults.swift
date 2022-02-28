@@ -19,4 +19,24 @@ class SmartHealthCardResults {
     var birthDate: String = ""
     var patientName: String = ""
     var iss: String = ""
+    
+    
+    func getPatientName() -> String {
+        return patientName
+    }
+    
+    func getBirthDate() -> String {
+        return birthDate
+    }
+    
+    func getBirthDateFormatted() -> String {
+        var formattedDOB = birthDate
+        let userDefaults = UserDefaults.standard
+        let hideDOB = userDefaults.bool(forKey: Constants.SETTINGS_HIDE_DATEOFBIRTH)
+        
+        if hideDOB == true {
+            formattedDOB = String(birthDate.map { _ in return "●"})
+        }
+        return formattedDOB
+    }
 }

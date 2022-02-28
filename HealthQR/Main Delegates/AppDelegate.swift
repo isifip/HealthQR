@@ -42,11 +42,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    func setupUserDefaults() {
+        let userDefaults = UserDefaults.standard
+        
+        if let hideDateOfBirth = userDefaults.value(forKey: Constants.SETTINGS_HIDE_DATEOFBIRTH) {
+            print("Birthdate value: \(hideDateOfBirth)")
+        } else {
+            print("Date of birth is empty")
+            userDefaults.set(true, forKey: Constants.SETTINGS_HIDE_DATEOFBIRTH)
+            userDefaults.synchronize()
+        }
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         
         testHarness()
         setupNavigationAppearance()
         setupDatabase()
+        setupUserDefaults()
         
         return true
     }

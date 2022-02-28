@@ -9,6 +9,8 @@ import Foundation
 
 class Constants {
     
+    static let SETTINGS_HIDE_DATEOFBIRTH = "hideDateOfBirth"
+    
     static let VERIFICATION_STATUS_VERIFIED = "Fully Verified"
     static let VERIFICATION_STATUS_PARTIALLY_VERIFIED = "Partially Verified"
     static let VERIFICATION_STATUS_NOT_VERIFIED = "Not Verified"

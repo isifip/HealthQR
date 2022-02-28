@@ -7,6 +7,12 @@
 
 import Foundation
 
+
+class SmartHealthCardRules {
+    static let requiredDoses: Int = 2
+    static let requiredDaysSinceLastDone: Int = 14
+}
+
 // MARK: - Welcome
 struct SmartHealthCard: Codable {
     let iss: String

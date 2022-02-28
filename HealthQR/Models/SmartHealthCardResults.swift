@@ -12,7 +12,7 @@ enum VerificationStatus: Codable {
 }
 
 class SmartHealthCardResults {
-    var varificationStatus: VerificationStatus = .NOT_VERIFIED
+    var verificationStatus: VerificationStatus = .NOT_VERIFIED
     var statusText: String = Constants.VERIFICATION_STATUS_NOT_VERIFIED
     var statusMessage: String = Constants.VERIFICATION_STATUS_MESSAGE_NOT_VERIFIED
     var immunizationEntries: Array<Entry> = Array<Entry>()

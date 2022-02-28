@@ -128,7 +128,63 @@ class SmartHealthCardReader {
     
     
     private func populateSmartHealthCardStatus(shc: SmartHealthCard, shcresults: SmartHealthCardResults, valid: Bool) {
-        
+        if valid == true {
+            shcresults.iss = shc.iss
+            shcresults.birthDate = shc.getBirthDate()
+            shcresults.patientName = shc.getPatientName()
+            
+            for entry in shc.vc.credentialSubject.fhirBundle.entry {
+                if entry.resource.resourceType == "Immunization" {
+                    shcresults.immunizationEntries.append(entry)
+                }
+            }
+            
+            if shcresults.immunizationEntries.count >= SmartHealthCardRules.requiredDoses {
+                
+                var daysSince = 0
+                
+                for entry in shcresults.immunizationEntries {
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "yyyy-MM-dd"
+                    
+                    if let doseDate = entry.resource.occurrenceDateTime {
+                        if let date = dateFormatter.date(from: doseDate) {
+                            let days = Common.daysBetween(start: date, end: Date())
+                            if daysSince == 0 || days < daysSince {
+                                daysSince = days
+                            }
+                            
+                            if daysSince >= SmartHealthCardRules.requiredDaysSinceLastDone {
+                                shcresults.verificationStatus = .VERIFIED
+                                shcresults.statusText = Constants.VERIFICATION_STATUS_VERIFIED
+                                shcresults.statusMessage = Constants.VERIFICATION_STATUS_MESSAGE_VERIFIED
+                            } else {
+                                shcresults.verificationStatus = .PARTIALLY_VERIFIED
+                                shcresults.statusText = Constants.VERIFICATION_STATUS_PARTIALLY_VERIFIED
+                                shcresults.statusMessage = "Last dose was less than \(SmartHealthCardRules.requiredDaysSinceLastDone) day(s) ago."
+                            }
+                        } else {
+                            shcresults.verificationStatus = .PARTIALLY_VERIFIED
+                            shcresults.statusText = Constants.VERIFICATION_STATUS_PARTIALLY_VERIFIED
+                            shcresults.statusMessage = "Unable to verify if last dose was \(SmartHealthCardRules.requiredDaysSinceLastDone) day(s) ago."
+                        }
+                    } else {
+                        shcresults.verificationStatus = .PARTIALLY_VERIFIED
+                        shcresults.statusText = Constants.VERIFICATION_STATUS_PARTIALLY_VERIFIED
+                        shcresults.statusMessage = "Unable to verify if last dose was \(SmartHealthCardRules.requiredDaysSinceLastDone) day(s) ago."
+                    }
+                }
+            } else {
+                shcresults.verificationStatus = .PARTIALLY_VERIFIED
+                shcresults.statusText = Constants.VERIFICATION_STATUS_PARTIALLY_VERIFIED
+                shcresults.statusMessage = "Patient does not have required minimum of \(SmartHealthCardRules.requiredDoses) doses"
+            }
+            
+        } else {
+            shcresults.verificationStatus = .NOT_VERIFIED
+            shcresults.statusText = Constants.VERIFICATION_STATUS_NOT_VERIFIED
+            shcresults.statusMessage = Constants.VERIFICATION_STATUS_MESSAGE_NOT_VERIFIED
+        }
     }
     
     private func verifySmartHealthCard(jws: JWS, shc: SmartHealthCard, shcresults: SmartHealthCardResults, completion: @escaping (Bool) -> Void) {

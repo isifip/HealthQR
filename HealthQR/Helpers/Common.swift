@@ -35,4 +35,12 @@ class Common {
         }
             
     }
+    
+    
+    static func daysBetween(start: Date, end: Date) -> Int {
+        let start = Calendar.current.date(bySettingHour: 0, minute: 0, second: 0, of: start)!
+        let end = Calendar.current.date(bySettingHour: 0, minute: 0, second: 0, of: end)!
+        return Calendar.current.dateComponents([.day], from: start, to: end).day ?? 0
+        
+    }
 }

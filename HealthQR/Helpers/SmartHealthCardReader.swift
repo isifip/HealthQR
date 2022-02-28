@@ -126,7 +126,12 @@ class SmartHealthCardReader {
         return retVal
     }
     
-    private func verifySmartHealthCard(jws: JWS, shc: SmartHealthCard, completion: @escaping (Bool) -> Void) {
+    
+    private func populateSmartHealthCardStatus(shc: SmartHealthCard, shcresults: SmartHealthCardResults, valid: Bool) {
+        
+    }
+    
+    private func verifySmartHealthCard(jws: JWS, shc: SmartHealthCard, shcresults: SmartHealthCardResults, completion: @escaping (Bool) -> Void) {
         let issuerURL = shc.iss + "/.well-known/jwks.json"
         
         guard let kid = jws.header.kid else {
@@ -140,13 +145,16 @@ class SmartHealthCardReader {
             case .success(let key):
                 if let key = key {
                     let valid = self.validateJWS(jws: jws, key: key)
+                    self.populateSmartHealthCardStatus(shc: shc, shcresults: shcresults, valid: valid)
                     completion(valid)
                 } else {
                     print("Error retreiving public keys")
+                    self.populateSmartHealthCardStatus(shc: shc, shcresults: shcresults, valid: false)
                     completion(false)
                 }
                 break
             case .failure(let error):
+                self.populateSmartHealthCardStatus(shc: shc, shcresults: shcresults, valid: false)
                 completion(false)
                 print("Error retreiving public keys: \(error)")
                 break
@@ -155,32 +163,32 @@ class SmartHealthCardReader {
         
     }
     
-    func parseSmartHealthCard(qrCodeString: String, completion: @escaping (SmartHealthCard?) ->Void) {
-        let shc: SmartHealthCard? = nil
+    func parseSmartHealthCard(qrCodeString: String, completion: @escaping (SmartHealthCardResults?) ->Void) {
+        let smartHealthCardResults = SmartHealthCardResults()
         
         if let jws = parseJWS(qrCodeString: qrCodeString) {
             do {
                 let uncompressed = try (jws.payload.data() as NSData).decompressed(using: .zlib)
                 guard let str = String.init(data: uncompressed as Data, encoding: .utf8) else {
-                    completion(shc)
+                    completion(smartHealthCardResults)
                     return
                 }
                 guard let jsonData = str.data(using: .utf8) else {
-                    completion(shc)
+                    completion(smartHealthCardResults)
                     return
                 }
                 
                 let shc = try JSONDecoder().decode(SmartHealthCard.self, from: jsonData)
                 print(shc)
-                verifySmartHealthCard(jws: jws, shc: shc) { success in
-                    print("Success: \(success)")
+                verifySmartHealthCard(jws: jws, shc: shc, shcresults: smartHealthCardResults) { success in
+                    completion(smartHealthCardResults)
                 }
-                completion(shc)
+                completion(smartHealthCardResults)
             } catch {
-                completion(shc)
+                completion(smartHealthCardResults)
             }
         } else {
-            completion(shc)
+            completion(smartHealthCardResults)
         }
     }
 }

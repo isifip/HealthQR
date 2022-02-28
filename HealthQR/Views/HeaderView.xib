@@ -11,20 +11,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="505" height="429"/>
+            <rect key="frame" x="0.0" y="0.0" width="467" height="280"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BNg-cY-MlQ" userLabel="subHeaderView">
-                    <rect key="frame" x="10" y="10" width="485" height="409"/>
+                    <rect key="frame" x="10" y="10" width="447" height="260"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is SMART Health Card cannot be verified. It may have been corrupted." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKR-HP-54U">
-                            <rect key="frame" x="0.0" y="40" width="485" height="369"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WWq-nz-Cz6" userLabel="statusTitleView">
-                            <rect key="frame" x="0.0" y="0.0" width="485" height="40"/>
+                            <rect key="frame" x="0.0" y="0.0" width="447" height="40"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="result_failed" translatesAutoresizingMaskIntoConstraints="NO" id="pfJ-e6-HPZ">
                                     <rect key="frame" x="0.0" y="5" width="60" height="30"/>
@@ -50,10 +44,10 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efH-2c-kjU" userLabel="headerContentView">
-                            <rect key="frame" x="0.0" y="40" width="485" height="369"/>
+                            <rect key="frame" x="0.0" y="40" width="447" height="220"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Has required minimum of 2 doses 14 days ago or earlier." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZb-nf-KFC">
-                                    <rect key="frame" x="5" y="5" width="475" height="50"/>
+                                    <rect key="frame" x="5" y="5" width="437" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="ARZ-do-WsU"/>
                                     </constraints>
@@ -62,7 +56,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWe-lM-p94">
-                                    <rect key="frame" x="5" y="60" width="218.5" height="24"/>
+                                    <rect key="frame" x="5" y="60" width="201" height="24"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="24" id="kfm-23-4NC"/>
                                     </constraints>
@@ -71,7 +65,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some Name(s)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rwp-az-32R">
-                                    <rect key="frame" x="223.5" y="60" width="256.5" height="24"/>
+                                    <rect key="frame" x="206" y="60" width="236" height="24"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="24" id="DGH-Tq-Czo"/>
                                     </constraints>
@@ -80,7 +74,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVb-sR-2bs">
-                                    <rect key="frame" x="5" y="89" width="218.5" height="24"/>
+                                    <rect key="frame" x="5" y="89" width="201" height="24"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="24" id="DCR-uZ-YcN"/>
                                     </constraints>
@@ -89,10 +83,32 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05-05-2000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2H-Ne-5vG">
-                                    <rect key="frame" x="223.5" y="89" width="256.5" height="24"/>
+                                    <rect key="frame" x="206" y="89" width="199" height="24"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="24" id="zml-8h-Swq"/>
+                                        <constraint firstAttribute="height" constant="24" id="z2O-8n-rG3"/>
                                     </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Issuer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdT-Ig-t5x">
+                                    <rect key="frame" x="5" y="118" width="201" height="24"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="24" id="GWo-L1-BIV"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye" translatesAutoresizingMaskIntoConstraints="NO" id="l1u-Vm-EHX">
+                                    <rect key="frame" x="415" y="89" width="25" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="25" id="H4W-Tp-F4K"/>
+                                        <constraint firstAttribute="height" constant="25" id="ovS-x5-PBV"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL Link for the issuer" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFy-HV-2ox">
+                                    <rect key="frame" x="5" y="147" width="437" height="68"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -100,23 +116,38 @@
                             </subviews>
                             <color key="backgroundColor" systemColor="systemOrangeColor"/>
                             <constraints>
+                                <constraint firstItem="EdT-Ig-t5x" firstAttribute="leading" secondItem="efH-2c-kjU" secondAttribute="leading" constant="5" id="08V-TJ-SDI"/>
+                                <constraint firstItem="EdT-Ig-t5x" firstAttribute="top" secondItem="qVb-sR-2bs" secondAttribute="bottom" constant="5" id="150-Q5-zOi"/>
                                 <constraint firstItem="eWe-lM-p94" firstAttribute="width" secondItem="efH-2c-kjU" secondAttribute="width" multiplier="0.45" id="20h-8d-qZC"/>
                                 <constraint firstItem="qVb-sR-2bs" firstAttribute="top" secondItem="eWe-lM-p94" secondAttribute="bottom" constant="5" id="2I6-JN-dcd"/>
-                                <constraint firstItem="s2H-Ne-5vG" firstAttribute="leading" secondItem="qVb-sR-2bs" secondAttribute="trailing" id="5We-Az-L8e"/>
                                 <constraint firstItem="eWe-lM-p94" firstAttribute="top" secondItem="aZb-nf-KFC" secondAttribute="bottom" constant="5" id="904-2Y-fKa"/>
                                 <constraint firstItem="aZb-nf-KFC" firstAttribute="leading" secondItem="efH-2c-kjU" secondAttribute="leading" constant="5" id="NE4-Vj-bUN"/>
                                 <constraint firstItem="Rwp-az-32R" firstAttribute="leading" secondItem="eWe-lM-p94" secondAttribute="trailing" id="O1T-bx-Wir"/>
-                                <constraint firstItem="s2H-Ne-5vG" firstAttribute="top" secondItem="Rwp-az-32R" secondAttribute="bottom" constant="5" id="RAk-9J-YWe"/>
+                                <constraint firstItem="TFy-HV-2ox" firstAttribute="top" secondItem="EdT-Ig-t5x" secondAttribute="bottom" constant="5" id="SPl-Jl-ubP"/>
                                 <constraint firstAttribute="trailing" secondItem="aZb-nf-KFC" secondAttribute="trailing" constant="5" id="VPv-i6-Tcd"/>
                                 <constraint firstItem="eWe-lM-p94" firstAttribute="leading" secondItem="efH-2c-kjU" secondAttribute="leading" constant="5" id="YKf-9l-wAb"/>
+                                <constraint firstAttribute="bottom" secondItem="TFy-HV-2ox" secondAttribute="bottom" constant="5" id="Ygb-1h-FTj"/>
                                 <constraint firstItem="aZb-nf-KFC" firstAttribute="top" secondItem="efH-2c-kjU" secondAttribute="top" constant="5" id="Zcm-N1-lBD"/>
+                                <constraint firstItem="l1u-Vm-EHX" firstAttribute="leading" secondItem="s2H-Ne-5vG" secondAttribute="trailing" constant="10" id="a9M-v6-PYW"/>
                                 <constraint firstAttribute="trailing" secondItem="Rwp-az-32R" secondAttribute="trailing" constant="5" id="bwq-SP-U0o"/>
-                                <constraint firstAttribute="trailing" secondItem="s2H-Ne-5vG" secondAttribute="trailing" constant="5" id="nUR-Rq-EZf"/>
+                                <constraint firstAttribute="trailing" secondItem="TFy-HV-2ox" secondAttribute="trailing" constant="5" id="eHR-7F-TbB"/>
+                                <constraint firstItem="TFy-HV-2ox" firstAttribute="leading" secondItem="efH-2c-kjU" secondAttribute="leading" constant="5" id="hIo-Zu-XUd"/>
+                                <constraint firstAttribute="trailing" secondItem="l1u-Vm-EHX" secondAttribute="trailing" constant="7" id="hyv-bL-gPV"/>
+                                <constraint firstItem="s2H-Ne-5vG" firstAttribute="leading" secondItem="qVb-sR-2bs" secondAttribute="trailing" id="lIo-rJ-10o"/>
+                                <constraint firstItem="l1u-Vm-EHX" firstAttribute="top" secondItem="Rwp-az-32R" secondAttribute="bottom" constant="5" id="mtF-ij-zcV"/>
+                                <constraint firstItem="s2H-Ne-5vG" firstAttribute="top" secondItem="Rwp-az-32R" secondAttribute="bottom" constant="5" id="qfx-0G-mX6"/>
                                 <constraint firstItem="qVb-sR-2bs" firstAttribute="leading" secondItem="efH-2c-kjU" secondAttribute="leading" constant="5" id="vTl-rN-uXg"/>
                                 <constraint firstItem="Rwp-az-32R" firstAttribute="top" secondItem="aZb-nf-KFC" secondAttribute="bottom" constant="5" id="x7g-C3-PfQ"/>
+                                <constraint firstItem="EdT-Ig-t5x" firstAttribute="width" secondItem="efH-2c-kjU" secondAttribute="width" multiplier="0.45" id="xB3-Uq-p2c"/>
                                 <constraint firstItem="qVb-sR-2bs" firstAttribute="width" secondItem="efH-2c-kjU" secondAttribute="width" multiplier="0.45" id="zzZ-aA-7z1"/>
                             </constraints>
                         </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is SMART Health Card cannot be verified. It may have been corrupted." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKR-HP-54U">
+                            <rect key="frame" x="0.0" y="40" width="447" height="220"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     <constraints>
@@ -143,10 +174,11 @@
                 <constraint firstItem="BNg-cY-MlQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="xpK-pC-HUW"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="203.62318840579712" y="70.647321428571431"/>
+            <point key="canvasLocation" x="167.39130434782609" y="9.375"/>
         </view>
     </objects>
     <resources>
+        <image name="eye" width="21" height="21"/>
         <image name="result_failed" width="123" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

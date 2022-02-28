@@ -12,6 +12,28 @@ struct SmartHealthCard: Codable {
     let iss: String
     let nbf: Double
     let vc: VaccineCard
+    
+    func getBirthDate() -> String {
+        guard let dob = vc.credentialSubject.fhirBundle.entry.first?.resource.birthDate else { return "" }
+        return dob
+    }
+    
+    func getPatientName() -> String {
+        var patientName: String = ""
+        
+        guard let name = vc.credentialSubject.fhirBundle.entry.first?.resource.name else { return "" }
+        guard let given = name.first?.given else { return "" }
+        
+        for name in given {
+            patientName += name + " "
+        }
+        
+        if let family = name.first?.family {
+            patientName += family
+        }
+        
+        return patientName.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
 }
 
 // MARK: - Vc

@@ -11,7 +11,11 @@ class ViewController: UIViewController {
 
     @IBOutlet var btnScan: CustomButton!
     @IBAction func scanButtonTapped(_ sender: Any) {
-        print("Scan button tapped")
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "resultsViewController") as? ResultsViewController else {
+            print("not working")
+            return
+        }
+        self.present(vc, animated: true)
     }
     
     override func viewDidLoad() {
@@ -23,4 +27,7 @@ class ViewController: UIViewController {
 
 
 }
+
+
+
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0CD1383D5397D25F5ABBE503 /* Pods_HealthQR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13DA33681CB4D0EC273531B0 /* Pods_HealthQR.framework */; };
+		C71F70A527CE545600354954 /* VaccineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71F70A427CE545600354954 /* VaccineTableViewCell.swift */; };
 		C743BDC427CCF946003B65D3 /* SmartHealthCardResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C743BDC327CCF946003B65D3 /* SmartHealthCardResults.swift */; };
 		C743BDC627CD1484003B65D3 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C743BDC527CD1484003B65D3 /* ResultsViewController.swift */; };
 		C743BDC827CD176B003B65D3 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C743BDC727CD176B003B65D3 /* HeaderView.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		13DA33681CB4D0EC273531B0 /* Pods_HealthQR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthQR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C71F70A427CE545600354954 /* VaccineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineTableViewCell.swift; sourceTree = "<group>"; };
 		C743BDC327CCF946003B65D3 /* SmartHealthCardResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartHealthCardResults.swift; sourceTree = "<group>"; };
 		C743BDC527CD1484003B65D3 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		C743BDC727CD176B003B65D3 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				C7C90BA527CB85EF008F6CFC /* CustomButton.swift */,
 				C743BDC727CD176B003B65D3 /* HeaderView.swift */,
 				C743BDCB27CD1916003B65D3 /* HeaderView.xib */,
+				C71F70A427CE545600354954 /* VaccineTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				C755E35B27CB9D4600E6F5BA /* SmartHealthCard.swift in Sources */,
 				C7A6A06627CA79CE0048B7B4 /* DatabaseManager.swift in Sources */,
 				C755E35D27CBA55E00E6F5BA /* SmartHealthCardReader.swift in Sources */,
+				C71F70A527CE545600354954 /* VaccineTableViewCell.swift in Sources */,
 				C7F4E3C927CA57550046B86E /* Theme.swift in Sources */,
 				C743BDC627CD1484003B65D3 /* ResultsViewController.swift in Sources */,
 				C7C90BA627CB85EF008F6CFC /* CustomButton.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HeaderView: UIView {
+@IBDesignable class HeaderView: UIView {
     
     @IBOutlet var showDateOfBirth: UIImageView!
     @IBOutlet var subheaderView: UIView!

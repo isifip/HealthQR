@@ -8,7 +8,12 @@
 import UIKit
 
 class VaccineTableViewCell: UITableViewCell {
-
+    
+    
+    @IBOutlet var manufacturerLabel: UILabel!
+    @IBOutlet var lotNumberLabel: UILabel!
+    @IBOutlet var issuerLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

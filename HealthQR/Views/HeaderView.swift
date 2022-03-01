@@ -11,6 +11,19 @@ class HeaderView: UIView {
     
     @IBOutlet var showDateOfBirth: UIImageView!
     
+    @IBOutlet var fullNameLabel: UILabel!
+    @IBOutlet var dateOfBirthLabel: UILabel!
+    @IBOutlet var issuerLabel: UILabel!
+    
+    
+    @IBOutlet var statusImageView: UIImageView!
+    @IBOutlet var statusTitleLabel: UILabel!
+    
+    @IBOutlet var HeaderContentView: UIView!
+    @IBOutlet var invalidMessageLabel: UILabel!
+    
+    
+    
     private func loadNib() {
         let nib = UINib(nibName: String(describing: type(of: self)), bundle: Bundle(for: type(of: self)))
         let view = nib.instantiate(withOwner: self, options: nil).first as! UIView

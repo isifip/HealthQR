@@ -19,6 +19,8 @@
                 <outlet property="statusImageView" destination="pfJ-e6-HPZ" id="ta3-nh-gsQ"/>
                 <outlet property="statusMessageLabel" destination="aZb-nf-KFC" id="Yc4-HJ-2sm"/>
                 <outlet property="statusTitleLabel" destination="9u2-AS-p34" id="xns-bR-L9Q"/>
+                <outlet property="statusTitleView" destination="WWq-nz-Cz6" id="qDY-5C-N9E"/>
+                <outlet property="subheaderView" destination="BNg-cY-MlQ" id="D03-H9-rG2"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

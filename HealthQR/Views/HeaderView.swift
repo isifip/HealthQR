@@ -7,9 +7,10 @@
 
 import UIKit
 
-class HeaderView: UIView {
+@IBDesignable class HeaderView: UIView {
     
     @IBOutlet var showDateOfBirth: UIImageView!
+    @IBOutlet var subheaderView: UIView!
     
     @IBOutlet var statusMessageLabel: UILabel!
     @IBOutlet var fullNameLabel: UILabel!
@@ -19,6 +20,7 @@ class HeaderView: UIView {
     
     @IBOutlet var statusImageView: UIImageView!
     @IBOutlet var statusTitleLabel: UILabel!
+    @IBOutlet var statusTitleView: UIView!
     
     @IBOutlet var HeaderContentView: UIView!
     @IBOutlet var invalidMessageLabel: UILabel!
@@ -63,6 +65,12 @@ class HeaderView: UIView {
         statusTitleLabel.text = statusTitle
         statusMessageLabel.text = statusMessage
         statusImageView.image = statusImage
+        
+        statusTitleView.backgroundColor = statusColor
+        subheaderView.backgroundColor = statusColor
+        self.backgroundColor = statusColor
+        HeaderContentView.backgroundColor = statusColor
+        
         
     }
     

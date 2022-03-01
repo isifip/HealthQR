@@ -238,7 +238,7 @@ class SmartHealthCardReader {
                 verifySmartHealthCard(jws: jws, shc: shc, shcresults: smartHealthCardResults) { success in
                     completion(smartHealthCardResults)
                 }
-                completion(smartHealthCardResults)
+                //completion(smartHealthCardResults)
             } catch {
                 completion(smartHealthCardResults)
             }

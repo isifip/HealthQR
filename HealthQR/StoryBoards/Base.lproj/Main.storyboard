@@ -183,6 +183,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="headerView" destination="r6M-uN-7Ux" id="c8r-2C-9C7"/>
                         <outlet property="tableView" destination="Ey7-RA-5Rg" id="odP-b8-Hwk"/>
                     </connections>
                 </viewController>

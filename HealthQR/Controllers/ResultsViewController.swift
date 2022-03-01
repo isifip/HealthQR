@@ -13,7 +13,21 @@ class ResultsViewController: UIViewController {
     var entries: Array<Entry> = Array<Entry>()
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var headerView: HeaderView!
     
+    func setupsUI() {
+        if let shcresults = shcresults {
+            self.headerView.populateView(shcresults: shcresults)
+        } else {
+            print("Results was nil, it shouldnt happen")
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setupsUI()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -17,6 +17,7 @@
                 <outlet property="issuerLabel" destination="TFy-HV-2ox" id="Vki-Tf-kqe"/>
                 <outlet property="showDateOfBirth" destination="l1u-Vm-EHX" id="RrG-n2-Gdd"/>
                 <outlet property="statusImageView" destination="pfJ-e6-HPZ" id="ta3-nh-gsQ"/>
+                <outlet property="statusMessageLabel" destination="aZb-nf-KFC" id="Yc4-HJ-2sm"/>
                 <outlet property="statusTitleLabel" destination="9u2-AS-p34" id="xns-bR-L9Q"/>
             </connections>
         </placeholder>

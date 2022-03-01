@@ -11,6 +11,7 @@ class HeaderView: UIView {
     
     @IBOutlet var showDateOfBirth: UIImageView!
     
+    @IBOutlet var statusMessageLabel: UILabel!
     @IBOutlet var fullNameLabel: UILabel!
     @IBOutlet var dateOfBirthLabel: UILabel!
     @IBOutlet var issuerLabel: UILabel!
@@ -22,7 +23,7 @@ class HeaderView: UIView {
     @IBOutlet var HeaderContentView: UIView!
     @IBOutlet var invalidMessageLabel: UILabel!
     
-    
+    var dateOfBirth: String = ""
     
     private func loadNib() {
         let nib = UINib(nibName: String(describing: type(of: self)), bundle: Bundle(for: type(of: self)))
@@ -37,6 +38,43 @@ class HeaderView: UIView {
             view.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             view.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
+    }
+    
+    private func setVerificationStatus(status: VerificationStatus, statusTitle: String, statusMessage: String) {
+        let statusColor = Theme.Colors.colorFromVerificationStatus(verificationStatus: status)
+        var statusImage: UIImage?
+        
+        switch status {
+        case .VERIFIED:
+            invalidMessageLabel.isHidden = true
+            HeaderContentView.isHidden = false
+            statusImage = UIImage(named: "result_verified")
+        case .PARTIALLY_VERIFIED:
+            invalidMessageLabel.isHidden = true
+            HeaderContentView.isHidden = false
+            statusImage = UIImage(named: "result_failed")
+        case .NOT_VERIFIED:
+            invalidMessageLabel.isHidden = false
+            invalidMessageLabel.text = statusMessage
+            HeaderContentView.isHidden = true
+            statusImage = UIImage(named: "result_invalid")
+        }
+        
+        statusTitleLabel.text = statusTitle
+        statusMessageLabel.text = statusMessage
+        statusImageView.image = statusImage
+        
+    }
+    
+    func populateView(shcresults: SmartHealthCardResults) {
+        self.fullNameLabel.text = shcresults.getPatientName()
+        self.dateOfBirth = shcresults.getBirthDate()
+        self.dateOfBirthLabel.text = shcresults.getBirthDateFormatted()
+        self.issuerLabel.text = shcresults.iss
+        
+        setVerificationStatus(status: shcresults.verificationStatus, statusTitle: shcresults.statusText, statusMessage: shcresults.statusMessage)
+        
+        self.backgroundColor = Theme.Colors.colorFromVerificationStatus(verificationStatus: shcresults.verificationStatus)
     }
     
     @objc func showDateOfBirthTapped() {

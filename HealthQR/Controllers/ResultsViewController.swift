@@ -17,6 +17,7 @@ class ResultsViewController: UIViewController {
     
     func setupsUI() {
         if let shcresults = shcresults {
+            entries = shcresults.immunizationEntries
             self.headerView.populateView(shcresults: shcresults)
         } else {
             print("Results was nil, it shouldnt happen")
@@ -46,15 +47,22 @@ extension ResultsViewController: UITableViewDelegate, UITableViewDataSource {
         guard let lotNumber = entry.resource.lotNumber else {
             return cell
         }
+        
         guard let issuer = entry.resource.performer?.first?.actor?.display else {
             return cell
         }
+        
         guard let vaccineCode = entry.resource.vaccineCode?.coding?.first?.code else {
             return cell
         }
         
-        // go to our database manager to look up the cvx code
-        // and we can set the manufacturer label to the vaccine description
+        cell.lotNumberLabel.text = "Lot #\(lotNumber)"
+        cell.issuerLabel.text = issuer
+        cell.manufacturerLabel.text = "Couldnt get label by cvx"
+        
+        if let vaccine = DatabaseManager.shared().getVaccineByCVX(cvx: Int(vaccineCode) ?? 0) {
+            cell.manufacturerLabel.text = vaccine.description
+        }
         
         return cell
     }

@@ -98,12 +98,13 @@ class DatabaseManager {
         guard let dbQueue = dbQueue else { return retVal }
         
         do {
-            try dbQueue.read({ db in
-                if let row = try Row.fetchOne(db, sql: "SELECT * vaccine WHERE cvx = ?", arguments: [cvx]) {
+            try dbQueue.read{ db in
+                if let row = try Row.fetchOne(db, sql: "SELECT * FROM vaccine WHERE cvx = ? ", arguments: [cvx]) {
                     retVal = Vaccine(id: row["id"], name: row["name"], description: row["description"], cvx: row["cvx"])
                 }
-            })
-        } catch {
+            }
+        }
+        catch{
             print("Error getting vaccine from cvx: \(error)")
         }
         

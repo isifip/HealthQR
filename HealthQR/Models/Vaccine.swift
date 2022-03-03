@@ -8,23 +8,23 @@
 import Foundation
 import GRDB
 
-
 class Vaccine: Record, Codable {
     var id: Int?
     var name: String
     var description: String
     var cvx: Int
     
-    init(id: Int? = nil, name: String, description: String, cvx: Int) {
+    init(id: Int? = nil, name: String, description: String, cvx: Int){
         self.id = id
         self.name = name
         self.description = description
         self.cvx = cvx
-        
         super.init()
     }
     
-    override class var databaseTableName: String { "vaccine" }
+    //override class var databaseTableName: String { "vaccine" }
+    override class var databaseTableName: String {"vaccine"}
+
     
     private enum Columns: CodingKey {
         static let id = Column(CodingKeys.id)
@@ -36,7 +36,7 @@ class Vaccine: Record, Codable {
     required init(row: Row) {
         id = row[Columns.id]
         name = row[Columns.name]
-        description = row[Columns.description]
+        description = row[Columns.name]
         cvx = row[Columns.cvx]
         super.init(row: row)
     }
@@ -51,5 +51,4 @@ class Vaccine: Record, Codable {
     override func didInsert(with rowID: Int64, for column: String?) {
         id = Int(rowID)
     }
-    
 }

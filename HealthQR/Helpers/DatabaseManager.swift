@@ -99,9 +99,10 @@ class DatabaseManager {
         
         do {
             try dbQueue.read{ db in
-                if let row = try Row.fetchOne(db, sql: "SELECT * FROM vaccine WHERE cvx = ? ", arguments: [cvx]) {
-                    retVal = Vaccine(id: row["id"], name: row["name"], description: row["description"], cvx: row["cvx"])
-                }
+                retVal = try Vaccine.fetchOne(db, sql: "SELECT * FROM vaccine WHERE cvx = ?", arguments: [cvx])
+//                if let row = try Row.fetchOne(db, sql: "SELECT * FROM vaccine WHERE cvx = ? ", arguments: [cvx]) {
+//                    retVal = Vaccine(id: row["id"], name: row["name"], description: row["description"], cvx: row["cvx"])
+//                }
             }
         }
         catch{

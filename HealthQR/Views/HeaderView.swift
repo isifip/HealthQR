@@ -87,7 +87,20 @@ import UIKit
     }
     
     @objc func showDateOfBirthTapped() {
-        print("Show/hide dob")
+        let blockedDateOfBirth = String(dateOfBirth.map { _ in return "●" })
+        
+        if let dateOfBirthString = dateOfBirthLabel.text {
+            if dateOfBirthString.contains("●") {
+                dateOfBirthLabel.text = dateOfBirth
+                showDateOfBirth.image = UIImage(named: "eye_hide")
+            }
+            else {
+                dateOfBirthLabel.text = blockedDateOfBirth
+                showDateOfBirth.image = UIImage(named: "eye")
+            }
+        } else {
+            print("Had a problem getting value from our dateOfBirthLabel")
+        }
     }
     
     func setup() {

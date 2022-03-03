@@ -40,6 +40,27 @@ class ResultsViewController: UIViewController {
 }
 
 extension ResultsViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let entry = entries[section]
+        var doseTitle = ""
+        if let dateTimeString = entry.resource.occurrenceDateTime {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            if let date = dateFormatter.date(from: dateTimeString) {
+                doseTitle = "Dose \(section + 1) - \(date.getFormattedDate(format: "MMM d, yyyy"))"
+            }
+        }
+        return doseTitle
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let header = view as? UITableViewHeaderFooterView
+        header?.textLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        header?.textLabel?.textColor = .white
+        header?.contentView.backgroundColor = Theme.Colors.vaccineTitleBackgroundColor()
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VaccineCell", for: indexPath) as! VaccineTableViewCell
         let entry = entries[indexPath.section]
@@ -60,6 +81,8 @@ extension ResultsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.issuerLabel.text = issuer
         cell.manufacturerLabel.text = "Couldnt get label by cvx"
         
+        
+        //MARK: --> For some reason vaccine value is still nil. gotta figure this out later!
         if let vaccine = DatabaseManager.shared().getVaccineByCVX(cvx: Int(vaccineCode) ?? 0) {
             cell.manufacturerLabel.text = vaccine.description
         }

@@ -93,7 +93,7 @@ class DatabaseManager {
     }
     
     func getVaccineByCVX(cvx: Int) -> Vaccine? {
-        var retVal: Vaccine? = nil
+        var retVal: Vaccine?
         
         guard let dbQueue = dbQueue else { return retVal }
         

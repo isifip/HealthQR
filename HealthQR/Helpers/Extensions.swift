@@ -42,3 +42,12 @@ extension Data {
         return [UInt8](self)
     }
 }
+
+
+extension Date {
+    func getFormattedDate(format: String) -> String {
+        let dateFormat = DateFormatter()
+        dateFormat.dateFormat = format
+        return dateFormat.string(from: self)
+    }
+}

@@ -11,6 +11,10 @@ class ResultsViewController: UIViewController {
 
     var shcresults: SmartHealthCardResults?
     var entries: Array<Entry> = Array<Entry>()
+
+    @IBAction func btnScanNextTapped(_ sender: Any) {
+        print("Scan Next")
+    }
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var headerView: HeaderView!

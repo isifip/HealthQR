@@ -11,9 +11,15 @@ class ResultsViewController: UIViewController {
 
     var shcresults: SmartHealthCardResults?
     var entries: Array<Entry> = Array<Entry>()
+    
+    weak var parentController: ViewController?
 
     @IBAction func btnScanNextTapped(_ sender: Any) {
-        print("Scan Next")
+        dismiss(animated: false) {
+            if self.parentController != nil {
+                self.parentController?.scanButtonTapped(self.parentController?.btnScan as Any)
+            }
+        }
     }
     
     @IBOutlet var tableView: UITableView!

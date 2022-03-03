@@ -83,6 +83,7 @@ extension ViewController: QRScannerCodeDelegate {
             if let shcresult = shcresults {
                 DispatchQueue.main.async {
                     vc.shcresults = shcresults
+                    vc.parentController = self
                     self.present(vc, animated: true)
                 }
             }

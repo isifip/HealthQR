@@ -172,14 +172,34 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6im-rh-uoa" userLabel="dividerView">
+                                <rect key="frame" x="0.0" y="745" width="414" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="hLX-cd-sF3"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MqN-52-Ix9" userLabel="scanNextView">
+                                <rect key="frame" x="0.0" y="746" width="414" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="1wz-FH-3he"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BSp-zJ-HAA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6im-rh-uoa" secondAttribute="trailing" id="0vQ-1P-kag"/>
                             <constraint firstAttribute="bottom" secondItem="Ey7-RA-5Rg" secondAttribute="bottom" id="1q2-CM-EA3"/>
+                            <constraint firstItem="MqN-52-Ix9" firstAttribute="leading" secondItem="BSp-zJ-HAA" secondAttribute="leading" id="4Ta-L9-b5a"/>
                             <constraint firstItem="Ey7-RA-5Rg" firstAttribute="leading" secondItem="RWX-ON-ekq" secondAttribute="leading" id="B0T-a2-jfr"/>
+                            <constraint firstItem="MqN-52-Ix9" firstAttribute="top" secondItem="6im-rh-uoa" secondAttribute="bottom" id="HUq-iF-CmR"/>
+                            <constraint firstItem="6im-rh-uoa" firstAttribute="leading" secondItem="RWX-ON-ekq" secondAttribute="leading" id="NtW-cA-FfH"/>
                             <constraint firstItem="Ey7-RA-5Rg" firstAttribute="top" secondItem="RWX-ON-ekq" secondAttribute="top" id="TXF-kb-zME"/>
                             <constraint firstItem="Ey7-RA-5Rg" firstAttribute="trailing" secondItem="RWX-ON-ekq" secondAttribute="trailing" id="h3s-C4-AoP"/>
+                            <constraint firstItem="BSp-zJ-HAA" firstAttribute="trailing" secondItem="MqN-52-Ix9" secondAttribute="trailing" id="heN-OF-aMb"/>
+                            <constraint firstAttribute="bottom" secondItem="MqN-52-Ix9" secondAttribute="bottom" id="rRr-N9-3cm"/>
                         </constraints>
                     </view>
                     <connections>

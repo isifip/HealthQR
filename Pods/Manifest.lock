@@ -1,0 +1,38 @@
+PODS:
+  - Eureka (5.3.4)
+  - GRDB.swift (5.21.0):
+    - GRDB.swift/standard (= 5.21.0)
+  - GRDB.swift/standard (5.21.0)
+  - JOSESwift (2.4.0)
+  - SwiftQRScanner (1.0.9)
+
+DEPENDENCIES:
+  - Eureka
+  - GRDB.swift
+  - JOSESwift (~> 2.3)
+  - SwiftQRScanner (from `https://github.com/vinodiOS/SwiftQRScanner`)
+
+SPEC REPOS:
+  trunk:
+    - Eureka
+    - GRDB.swift
+    - JOSESwift
+
+EXTERNAL SOURCES:
+  SwiftQRScanner:
+    :git: https://github.com/vinodiOS/SwiftQRScanner
+
+CHECKOUT OPTIONS:
+  SwiftQRScanner:
+    :commit: 9eb7b0bb5397b596cbf1fcaa11636a197cc84132
+    :git: https://github.com/vinodiOS/SwiftQRScanner
+
+SPEC CHECKSUMS:
+  Eureka: 60cf058f86a8fb3ed26165ba5292b9850361b0a6
+  GRDB.swift: 09b2c81379f8949e1f6e2696f620bf15b7b9a051
+  JOSESwift: 7ff178bb9173ff42c6e990929a9f2fa702a34f69
+  SwiftQRScanner: e09dc7b549d0d7301cdca505d483665af8cda58e
+
+PODFILE CHECKSUM: 7c2bebba57d87110160736900e163fc68d04a9ca
+
+COCOAPODS: 1.11.2

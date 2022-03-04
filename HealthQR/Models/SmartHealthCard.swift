@@ -46,7 +46,7 @@ struct SmartHealthCard: Codable {
 struct VaccineCard: Codable {
     let type: [String]
     let credentialSubject: CredentialSubject
-    let rid: String
+    let rid: String?
 }
 
 // MARK: - CredentialSubject

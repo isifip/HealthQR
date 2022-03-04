@@ -40,7 +40,7 @@ class ViewController: UIViewController {
             let authStatus = AVCaptureDevice.authorizationStatus(for: .video)
             switch authStatus {
             case .notDetermined:
-                alertPromptToAllowCameraAccess()
+                startScanner()
             case .restricted:
                 alertPromptToAllowCameraAccess()
             case .denied:

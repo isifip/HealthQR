@@ -15,6 +15,17 @@ class Common {
         return instance
     }()
     
+    static func getAppVersion() -> String {
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
+        return appVersion
+    }
+    
+    static func openURL(urlString: String) {
+        if let url = URL(string: urlString) {
+            UIApplication.shared.open(url)
+        }
+    }
+    
     static func getDocumentsDirectoryAppend(text: String) -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentsDirectory = paths[0]

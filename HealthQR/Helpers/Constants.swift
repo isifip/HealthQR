@@ -9,6 +9,9 @@ import Foundation
 
 class Constants {
     
+    static let PRIVACY_URL = "https://www.google.com"
+    static let TERMS_URL = "https://www.apple.com"
+    
     static let SETTINGS_HIDE_DATEOFBIRTH = "hideDateOfBirth"
     
     static let VERIFICATION_STATUS_VERIFIED = "Fully Verified"

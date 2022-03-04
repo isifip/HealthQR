@@ -43,6 +43,20 @@ class SettingsViewController: FormViewController {
             cell.accessoryType = .disclosureIndicator
             cell.selectionStyle = .default
         })
+        
+        +++ Section("Options")
+        
+        <<< SwitchRow() { row in
+            row.title = "Hide Date of Birth"
+        }.onChange({ row in
+            let userDefaults = UserDefaults.standard
+            userDefaults.set(row.value, forKey: Constants.SETTINGS_HIDE_DATEOFBIRTH)
+            userDefaults.synchronize()
+        }).cellSetup({ cell, row in
+            let userDefaults = UserDefaults.standard
+            row.value = userDefaults.bool(forKey: Constants.SETTINGS_HIDE_DATEOFBIRTH)
+            row.updateCell()
+        })
     }
     
 
